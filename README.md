@@ -6,4 +6,8 @@
 
 <small>Art by <a href="">@Ariel</a></small>
 
-A 2 week game project developed at <Academia de codigo_>, inspired by the adventures of KotxiPOSIX in the incredible landscape of Serra Malagueta and Tarrafal, Santiago island, Cape Verde.
+# Concept
+A 2 week platformer game project developed at <Academia de codigo_>, inspired by the adventures of KotxiPOSIX in the incredible landscape of Serra Malagueta and Tarrafal, Santiago island, Cape Verde.
+
+# Techs
+Java, Simple GFX Library, Git
