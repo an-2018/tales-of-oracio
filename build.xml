@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+
+<project name="katxupi-adventures" basedir="." default="jarfile">
+
+    <!-- initialize build properties -->
+    <target name="init" description="Initializes properties">
+        <property name="project.name" value="katxupi-adventures"/>
+        <property name="src.dir" value="src"/>
+        <property name="main.class" value="org.academiadecodigo.kotxiposix.katxupiadventures.KAdventures"/>
+        <property name="build.dir" value="build"/>
+        <property name="classes.dir" value="${build.dir}/classes"/>
+        <property name="lib.dir" value="lib" />
+        <property name="public.dir" value="public"/>
+        <property name="version" value="0.0.1"/>
+        <path id="classpath">
+            <fileset dir="${lib.dir}" includes="**/*.jar" />
+        </path>
+    </target>
+    <target name="prepare" description="Creats the build and classes directories" depends="init">
+        <mkdir dir="${classes.dir}"/>
+    </target>
+
+
+    <target name="compile" description="Compile the code" depends="prepare">
+        <javac source="1.8" target="1.8" srcdir = "${src.dir}" destdir="${classes.dir}">
+            <classpath refid="classpath"/>
+        </javac>
+    </target>
+
+    <target name="jarfile" description="Archives the code" depends="compile">
+        <jar destfile="${build.dir}/${project.name}-${version}.jar" basedir="${classes.dir}">
+            <manifest>
+                <attribute name="Main-class" value="${main.class}"/>
+                <attribute name="Class-Path" value="${lib.dir} ${public.dir}" />
+            </manifest>
+            <zipgroupfileset dir="${lib.dir}" includes="*.jar"/>
+            <fileset dir=".">
+                <include name="**/${public.dir}/**"/>
+            </fileset>
+        </jar>
+    </target>
+
+    <target name="clean" description="Clean Up" depends="init">
+        <delete dir="${build.dir}"/>
+    </target>
+
+</project>
