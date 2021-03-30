@@ -1,7 +1,7 @@
 # Orácio's tales
 
 <div style="text-align:center">
-    <img src="https://github.com/an-2018/tales-of-oracio/resources/hero_image.png?raw=true" alt="Tales of Oracio" />
+    <img src="https://github.com/an-2018/tales-of-oracio/blob/main/resources/hero_image.png?raw=true" alt="Tales of Oracio" />
 </div>
 
 <small>Art by <a href="">@Ariel</a></small>
